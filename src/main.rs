@@ -1,6 +1,18 @@
+use clap::Parser;
 use git_history_by_example::custom_add;
 
+#[derive(Parser)]
+#[command(author, version, about, long_about = None)]
+struct Args {
+    /// First number to add
+    first: i64,
+
+    /// Second number to add
+    second: i64,
+}
+
 fn main() {
-    let total = custom_add(1, 1);
-    println!("Your total is {total}");
+    let args = Args::parse();
+    let total = custom_add(args.first, args.second);
+    println!("{total}");
 }
