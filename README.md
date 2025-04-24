@@ -27,3 +27,23 @@ librs_first_commit=$(git log --pretty=format:"%h" --diff-filter=A -- src/lib.rs)
 git bisect good $librs_first_commit
 git bisect run sh -c 'cargo run -- 9007199254740993 1 | grep -q "^9007199254740994$" || exit 1'
 ```
+
+---
+
+The history was mangled using
+```sh
+git filter-branch -f --msg-filter 'uuidgen' HEAD
+```
+
+The following script was used to generate useless commits for this branch. This was simply called many times.
+
+```sh
+generate_timestamp_commit() {
+    timestamp="$(date '+%Y_%m_%d_%H_%M_%S_%N')"
+    sed -i "s#custom_add.*(#custom_add_$timestamp(#" src/lib.rs
+    sed -i "s#custom_add.*(#custom_add_$timestamp(#" src/main.rs
+    sed -i "s#git_history_by_example::custom_add.*;#git_history_by_example::custom_add_$timestamp;#" src/main.rs
+    git add src
+    git commit -m "$(uuidgen)"
+}
+```
