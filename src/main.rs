@@ -3,7 +3,8 @@ fn custom_add(a: i64, b: i64) -> i64 {
 }
 
 fn main() {
-    println!("Hello, world!");
+    let total = custom_add(1, 1);
+    println!("Your total is {total}");
 }
 
 #[cfg(test)]
