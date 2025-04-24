@@ -1,5 +1,5 @@
 /** supper sekrit business logic function */
-pub fn custom_add_2025_04_24_16_29_55_289501214(a: f64, b: f64) -> f64 {
+pub fn custom_add_2025_04_24_16_29_55_305871659(a: f64, b: f64) -> f64 {
     a + b
 }
 
@@ -9,13 +9,13 @@ mod tests {
 
     #[test]
     fn add_values() {
-        assert_eq!(custom_add_2025_04_24_16_29_55_289501214(1.0, 2.0), 3.0)
+        assert_eq!(custom_add_2025_04_24_16_29_55_305871659(1.0, 2.0), 3.0)
     }
 
     #[test]
     fn add_big_values() {
         assert_eq!(
-            custom_add_2025_04_24_16_29_55_289501214(18_446_744_073_709_551_615.0, 1.0), 18_446_744_073_709_551_616.0 // adding to u64::MAX
+            custom_add_2025_04_24_16_29_55_305871659(18_446_744_073_709_551_615.0, 1.0), 18_446_744_073_709_551_616.0 // adding to u64::MAX
         )
     }
 }
