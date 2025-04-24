@@ -1,4 +1,4 @@
-/** supper sekrit business logic */
+/** supper sekrit business logic function */
 pub fn custom_add(a: i64, b: i64) -> i64 {
     a + b
 }
