@@ -27,3 +27,8 @@ librs_first_commit=$(git log --pretty=format:"%h" --diff-filter=A -- src/lib.rs)
 git bisect good $librs_first_commit
 git bisect run sh -c 'cargo run -- 9007199254740993 1 | grep -q "^9007199254740994$" || exit 1'
 ```
+
+The history was mangled using
+```sh
+git filter-branch -f --msg-filter 'uuidgen' HEAD
+```
