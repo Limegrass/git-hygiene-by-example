@@ -5,10 +5,10 @@ use git_history_by_example::custom_add;
 #[command(author, version, about, long_about = None)]
 struct Args {
     /// First number to add
-    first: i64,
+    first: i64, // matches type of git_history_by_example::custom_add;
 
     /// Second number to add
-    second: i64,
+    second: i64, // matches type of git_history_by_example::custom_add;
 }
 
 fn main() {
