@@ -1,18 +1,18 @@
 use clap::Parser;
-use git_history_by_example::custom_add_2025_04_24_16_29_54_436134900;
+use git_history_by_example::custom_add_2025_04_24_16_29_54_452929670;
 
 #[derive(Parser)]
 #[command(author, version, about, long_about = None)]
 struct Args {
     /// First number to add
-    first: f64, // matches type of git_history_by_example::custom_add_2025_04_24_16_29_54_436134900;
+    first: f64, // matches type of git_history_by_example::custom_add_2025_04_24_16_29_54_452929670;
 
     /// Second number to add
-    second: f64, // matches type of git_history_by_example::custom_add_2025_04_24_16_29_54_436134900;
+    second: f64, // matches type of git_history_by_example::custom_add_2025_04_24_16_29_54_452929670;
 }
 
 fn main() {
     let args = Args::parse();
-    let total = custom_add_2025_04_24_16_29_54_436134900(args.first, args.second);
+    let total = custom_add_2025_04_24_16_29_54_452929670(args.first, args.second);
     println!("{total}");
 }
