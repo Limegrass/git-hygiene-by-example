@@ -5,10 +5,10 @@ use git_history_by_example::custom_add_2025_04_24_16_26_37_074675540;
 #[command(author, version, about, long_about = None)]
 struct Args {
     /// First number to add
-    first: i64, // matches type of git_history_by_example::custom_add_2025_04_24_16_26_37_074675540;
+    first: f64, // matches type of git_history_by_example::custom_add_2025_04_24_16_26_37_074675540;
 
     /// Second number to add
-    second: i64, // matches type of git_history_by_example::custom_add_2025_04_24_16_26_37_074675540;
+    second: f64, // matches type of git_history_by_example::custom_add_2025_04_24_16_26_37_074675540;
 }
 
 fn main() {
